@@ -50,7 +50,7 @@ class XGBoostRegressionModel private[spark](override val uid: String, booster: B
       transformerForArrayTypedPredCol.apply(col(tempPredColName))).drop(tempPredColName)
   }
 
-  override protected def predict(features: MLVector): Double = {
+  override def predict(features: MLVector): Double = {
     throw new Exception("XGBoost does not support online prediction for now")
   }
 

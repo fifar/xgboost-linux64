@@ -175,7 +175,7 @@ class XGBoostClassificationModel private[spark](
     newModel.setSummary(summary)
   }
 
-  override protected def predict(features: MLVector): Double = {
+  override def predict(features: MLVector): Double = {
     throw new Exception("XGBoost does not support online prediction ")
   }
 }
