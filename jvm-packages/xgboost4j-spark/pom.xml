@@ -6,7 +6,7 @@
     <parent>
         <groupId>ml.dmlc</groupId>
         <artifactId>xgboost-jvm</artifactId>
-        <version>0.8-SNAPSHOT</version>
+        <version>0.8.9-SNAPSHOT</version>
     </parent>
     <artifactId>xgboost4j-spark</artifactId>
     <build>
@@ -24,7 +24,7 @@
         <dependency>
             <groupId>ml.dmlc</groupId>
             <artifactId>xgboost4j</artifactId>
-            <version>0.8-SNAPSHOT</version>
+            <version>0.8.9-SNAPSHOT</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.scala-lang/scala-reflect -->
@@ -32,6 +32,7 @@
          <groupId>org.scala-lang</groupId>
          <artifactId>scala-reflect</artifactId>
          <version>${scala.version}</version>
+           <scope>provided</scope>
        </dependency>
 
        <dependency>

@@ -6,7 +6,7 @@
 
     <groupId>ml.dmlc</groupId>
     <artifactId>xgboost-jvm</artifactId>
-    <version>0.8-SNAPSHOT</version>
+    <version>0.8.9-SNAPSHOT</version>
     <packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -14,8 +14,8 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <flink.version>0.10.2</flink.version>
-        <spark.version>2.3.0</spark.version>
-        <scala.version>2.11.8</scala.version>
+        <spark.version>2.4.0</spark.version>
+        <scala.version>2.11.11</scala.version>
         <scala.binary.version>2.11</scala.binary.version>
     </properties>
     <repositories>
@@ -219,38 +219,48 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.1.1</version>
+            </plugin>
         </plugins>
     </build>
     <dependencies>
-        <dependency>
-            <groupId>com.esotericsoftware.kryo</groupId>
-            <artifactId>kryo</artifactId>
-            <version>2.21</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.esotericsoftware.kryo</groupId>-->
+<!--            <artifactId>kryo</artifactId>-->
+<!--            <version>2.21</version>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-compiler</artifactId>
             <version>${scala.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-reflect</artifactId>
             <version>${scala.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-library</artifactId>
             <version>${scala.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
             <version>1.2</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.scalatest</groupId>
             <artifactId>scalatest_${scala.binary.version}</artifactId>
-            <version>3.0.0</version>
+            <version>3.0.5</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
